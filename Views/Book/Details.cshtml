@@ -1,0 +1,15 @@
+﻿@model Books
+<h1>@Model.bookName</h1>
+<div class="thumbnail">
+    <img alt="@Model.bookName" src="@Model.bookImageUrl" />
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.bookPrice</h3>
+        <h3><a href="#">@Model.bookName</a></h3>
+        <p>@Model.bookDescription</p>
+    </div>
+    <div class="addToCart">
+        <p class="button">
+            <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-BookId="@Model.bookId">Add To Cart</a>
+        </p>
+    </div>
+</div>

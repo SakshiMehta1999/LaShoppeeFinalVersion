@@ -1,0 +1,9 @@
+﻿@model HomeViewModel
+<partial name="_carousel" />
+<h2>Books On Sale</h2>
+<div class="row">
+    @foreach(var books in Model.bookOnSale) { 
+    <partial name="_BookCard" model="books"/>
+    }
+
+</div>
